@@ -41,7 +41,8 @@ public class LeetCodeProblem350 {
 		Arrays.sort(nums2);
 		int index1=0;
 		int index2=0;
-		
+			String s ="shhs";
+			//s.repl
 		while(index1<nums1.length && index2<nums2.length)
 		{
 			if(nums1[index1]==nums2[index2])
