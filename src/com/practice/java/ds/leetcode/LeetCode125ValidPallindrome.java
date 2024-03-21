@@ -1,6 +1,6 @@
 package com.practice.java.ds.leetcode;
 
-public class ValidPallindromeLeetCode125 {
+public class LeetCode125ValidPallindrome {
 	
 	 /**
 	 * @param s
