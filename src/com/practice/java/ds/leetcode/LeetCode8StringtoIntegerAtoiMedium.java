@@ -63,13 +63,15 @@ Constraints:
 s consists of English letters (lower-case and upper-case), digits (0-9), ' ', '+', '-', and '.'.
  
  */
-public class LeetCode8StringtoIntegerAtoi {
+public class LeetCode8StringtoIntegerAtoiMedium {
 	
 	
 	
 	public static void main(String [] args)
 	{
-		
+		String s = "42";
+		String s1 = "   -42";
+		String s2 = "4193 with words";
 		
 		
 		
