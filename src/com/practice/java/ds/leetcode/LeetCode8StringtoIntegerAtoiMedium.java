@@ -65,13 +65,71 @@ s consists of English letters (lower-case and upper-case), digits (0-9), ' ', '+
  */
 public class LeetCode8StringtoIntegerAtoiMedium {
 	
+	/**
+	 * @param s
+	 * @return
+	 */
+	public static int myAtoi(String s) {
+		
+		if(s==null)
+		{
+			return 0;
+		}
+		s=s.trim();
+		
+		if(s.isEmpty())
+		{
+			return 0;
+		}
+		
+		char flag = '+';
+		int index=0;
+		
+		
+		if(s.charAt(index)=='-')
+		{
+			flag='-';
+			index++;
+		}else if(s.charAt(index)=='+')
+		{
+			index++;
+		}
+		double result=0;
+		
+		while(index<s.length() && s.charAt(index) >='0' && s.charAt(index) <='9')
+		{
+			result = result*10 + (s.charAt(index) -'0');
+			index++;
+		}
+		
+		if(flag=='-')
+		{
+			result=-result;
+		}
+		
+		
+		
+		
+		
+		
+		
+		
+		return (int)result;
+		
+	}
+	
+	
 	
 	
 	public static void main(String [] args)
 	{
-		String s = "42";
-		String s1 = "   -42";
-		String s2 = "4193 with words";
+		String s1 = "42";
+		String s2 = "   -42";
+		String s3 = "4193 with words";
+		
+		System.out.println(myAtoi(s1));
+		System.out.println(myAtoi(s2));
+		System.out.println(myAtoi(s3));
 		
 		
 		
