@@ -1,52 +1,60 @@
 package com.practice.java.ds.leetcode;
 
 import java.util.HashMap;
-import java.util.Map;
 
 
 public class LeetCode13RomantoInteger {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		// TODO Auto-generated method stubO
 		
 		String str1="LVIII"; //
 		String str2="III"; //3
 		String str3="MCMXCIV"; //
 		
-		System.out.println(romanConvertor(str1));
-		System.out.println(romanConvertor(str2));
-		System.out.println(romanConvertor(str3));
+		System.out.println( "LVIII 58 result ->"+romanConvertor(str1));
+		System.out.println("III 3 result ->"+ romanConvertor(str2));
+		System.out.println("MCMXCIV 1994 result->" +romanConvertor(str3));
 		
 
 	}
 	
 	
-	public static int romanConvertor(String roman)
+	public static int romanConvertor(String s)
 	{
-		Map<Character, Integer> romanMap = new HashMap<Character, Integer>();
-		romanMap.put('I', 1);
-		romanMap.put('V', 5);
-		romanMap.put('X', 10);
-		romanMap.put('L', 50);
-		romanMap.put('C', 100);
-		romanMap.put('D', 500);
-		romanMap.put('M', 1000);
-		
-		int result=0;
-		for(int i=0;i<roman.length();i++)
-		{
-			if(i<roman.length()-1 && romanMap.get(roman.charAt(i)) < romanMap.get(roman.charAt(i+1)))
-			{
-				result-= romanMap.get(roman.charAt(i));
-			}
-			else
-			{
-				result+= romanMap.get(roman.charAt(i));
-			}
-		}
-		
-		return result;
-		
+		 HashMap<Character ,Integer> hm = new HashMap<>();
+	        hm.put('I',1);
+	        hm.put('V', 5);
+	        hm.put('X',10);
+	        hm.put('L',50);
+	        hm.put('C',100);
+	        hm.put('D',500);
+	        hm.put('M',1000);
+
+	        //III
+	        //IV
+	        //VI
+
+	        int result =0;
+	        for(int i=0;i<s.length();i++)
+	        {
+	            int current =hm.get(s.charAt(i));
+	             int next=0;
+	            if(i+1<s.length())
+	            {next = hm.get(s.charAt(i+1));}
+	            if(current < next)
+	            {
+	                result =result-current;
+	            }
+	            else
+	            {
+	                result=result+current;
+	            }
+
+
+	        }
+
+	        return result;
 	}
 
 }
