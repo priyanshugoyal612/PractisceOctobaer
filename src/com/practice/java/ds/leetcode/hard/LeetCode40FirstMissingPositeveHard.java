@@ -1,4 +1,4 @@
-package com.practice.java.ds.leetcode;
+package com.practice.java.ds.leetcode.hard;
 
 import java.util.Arrays;
 import java.util.List;
