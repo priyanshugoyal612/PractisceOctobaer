@@ -7,11 +7,11 @@ public class BSTDemo {
 		BinaryTree bst = new BinaryTree();
 		
 		bst.add(bst.root, new Node(10, null,null));
+		bst.add(bst.root, new Node(11, null,null));
 		bst.add(bst.root, new Node(12, null,null));
-		bst.add(bst.root, new Node(8, null,null));
-		bst.add(bst.root, new Node(7, null,null));
+		bst.add(bst.root, new Node(6, null,null));
 		
-		bst.search(1, bst.root);
+		bst.search(12, bst.root);
 	}
 
 }

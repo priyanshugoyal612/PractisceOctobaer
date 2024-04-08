@@ -40,7 +40,7 @@ public class BinaryTree {
 		}
 		if(value==start.value)
 		{
-			System.out.println("Value is found" + value);
+			System.out.println("Value is found " + value);
 			return;
 		}
 		if(value>start.value)
