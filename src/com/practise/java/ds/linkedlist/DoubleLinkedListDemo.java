@@ -1,19 +1,9 @@
 package com.practise.java.ds.linkedlist;
 
-public class LinkedListDemo {
-	
+public class DoubleLinkedListDemo {
+
 	public static void main(String[] args) {
-		
-		java.util.LinkedList<String> pr	= new java.util.LinkedList<String>();
-		pr.add("Ram");
-		pr.add("shyam");
-		pr.add("trya");
-		
-		System.out.println(pr.get(0))
-		;
-	
-		
-		MyLinkedList<String> list = new MyLinkedList<String>();
+		DoublyLinkedList<String> list = new DoublyLinkedList<String>();
 		list.add("Priyanhsu");
 		list.add("Shivanshu");
 		list.add("Himanshu");
@@ -26,7 +16,7 @@ public class LinkedListDemo {
 		list.remove();
 		list.remove();
 		list.remove();
-		System.out.println(" **********");
+		System.out.println("**********");
 		list.display();
 		
 		list.remove();
@@ -34,9 +24,10 @@ public class LinkedListDemo {
 		list.remove();
 		list.remove();
 		
-		System.out.println(" **********");
+		System.out.println("**********");
 		list.display();
 		
+
 	}
 
 }
